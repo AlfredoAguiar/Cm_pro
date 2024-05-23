@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="navigation_drawer_open" translatable="false">Open navigation drawer</string>
+    <string name="navigation_drawer_close" translatable="false">Close navigation drawer</string>
+    <string name="nav_header_title" translatable="false">Android Studio</string>
+    <string name="nav_header_subtitle" translatable="false">android.studio@android.com</string>
+    <string name="nav_header_desc" translatable="false">Navigation header</string>
+    <string name="action_settings" translatable="false">Settings</string>
+
+    <string name="menu_home" translatable="false">Profile</string>
+    <string name="menu_completed_tasks" translatable="false">Completed tasks</string>
+    <string name="menu_prending_tasks" translatable="false">Pending tasks</string>
+    <string name="button_back" translatable="false"><![CDATA[<]]></string>
+    <string name="welcome_back" translatable="false">Welcome Back</string>
+    <string name="completed_tasks" translatable="false">Completed Tasks</string>
+    <string name="pending_tasks" translatable="false">Pending tasks</string>
+    <string name="profile">Profile</string>
+    <string name="edit">Edit</string>
+</resources>
