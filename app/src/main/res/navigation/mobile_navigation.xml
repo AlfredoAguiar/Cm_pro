@@ -27,18 +27,18 @@
     <fragment
         android:id="@+id/nav_test"
         android:name="com.example.myapplication.ui.test.TestFragment"
-        android:label="@string/menu_prending_tasks"
+        android:label="Manage Usres"
         tools:layout="@layout/fragment_test" />
 
     <fragment
         android:id="@+id/nav_stats"
-        android:icon="@android:drawable/ic_menu_sort_by_size"
-        android:label="@string/menu_prending_tasks"
-        tools:layout="@layout/fragment_test" />
+        android:name="com.example.myapplication.ui.statics.StatFragment"
+        android:label="Stats"
+        tools:layout="@layout/stat" />
 
     <fragment
         android:id="@+id/nav_create_project"
-        android:icon="@android:drawable/ic_menu_sort_by_size"
-        android:label="@string/menu_prending_tasks"
+        android:name="com.example.myapplication.ui.create_project.CreateProjectFragment"
+        android:label="Create Project"
         tools:layout="@layout/fragment_test" />
 </navigation>

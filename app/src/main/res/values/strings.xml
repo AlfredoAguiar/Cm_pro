@@ -16,4 +16,6 @@
     <string name="pending_tasks" translatable="false">Pending tasks</string>
     <string name="profile">Profile</string>
     <string name="edit">Edit</string>
+    <string name="en">English</string>
+    <string name="pt">Portugues</string>
 </resources>

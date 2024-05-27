@@ -28,7 +28,19 @@
             android:icon="@android:drawable/ic_menu_directions"
             android:title="Logout" />
     </group>
+    <group
+        android:checkableBehavior="single">
 
+        <item
+            android:id="@+id/nav_EN"
+            android:icon="@android:drawable/ic_input_get"
+            android:title="@string/en" />
+        <item
+            android:id="@+id/nav_PT"
+            android:icon="@android:drawable/ic_input_get"
+            android:title="@string/pt" />
+
+    </group>
 
 
 </menu>

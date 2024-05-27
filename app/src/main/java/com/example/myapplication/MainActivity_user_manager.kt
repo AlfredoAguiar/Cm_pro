@@ -1,6 +1,7 @@
 package com.example.myapplication
 
 import android.content.Intent
+import android.content.res.Configuration
 import android.os.Bundle
 import android.view.Menu
 import com.google.android.material.navigation.NavigationView
@@ -13,6 +14,7 @@ import androidx.drawerlayout.widget.DrawerLayout
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.ui.NavigationUI
 import com.example.myapplication.databinding.ActivityMainBinding
+import java.util.Locale
 
 class MainActivity_user_manager : AppCompatActivity() {
 
@@ -27,11 +29,10 @@ class MainActivity_user_manager : AppCompatActivity() {
 
         setSupportActionBar(binding.appBarMain.toolbar)
 
-        val drawerLayout: DrawerLayout = findViewById(R.id.drawer_layout_admin)
+        val drawerLayout: DrawerLayout = binding.drawerLayout
         val navView: NavigationView = binding.navView
         val navController = findNavController(R.id.nav_host_fragment_content_main)
-        // Passing each menu ID as a set of Ids because each
-        // menu should be considered as top level destinations.
+
         appBarConfiguration = AppBarConfiguration(
             setOf(
                 R.id.nav_home, R.id.nav_gallery, R.id.nav_slideshow
@@ -41,27 +42,49 @@ class MainActivity_user_manager : AppCompatActivity() {
         navView.setupWithNavController(navController)
 
         navView.setNavigationItemSelectedListener { menuItem ->
-            if (menuItem.itemId == R.id.nav_logout) {
-                logout()
-                drawerLayout.closeDrawer(navView) // Close the drawer after logout
-                true
-            } else {
-                NavigationUI.onNavDestinationSelected(menuItem, navController)
-                drawerLayout.closeDrawer(navView) // Close the drawer after navigation
-                true
+            when (menuItem.itemId) {
+                R.id.nav_logout -> {
+                    logout()
+                    drawerLayout.closeDrawer(navView)
+                    true
+                }
+                R.id.nav_EN -> {
+                    setLocale("en")
+                    drawerLayout.closeDrawer(navView)
+                    true
+                }
+                R.id.nav_PT -> {
+                    setLocale("pt")
+                    drawerLayout.closeDrawer(navView)
+                    true
+                }
+                else -> {
+                    NavigationUI.onNavDestinationSelected(menuItem, navController)
+                    drawerLayout.closeDrawer(navView)
+                    true
+                }
             }
         }
     }
 
     private fun logout() {
-        // Implement logout functionality here
-        // For example, navigate to the LoginActivity and clear session data
         val intent = Intent(this, login::class.java)
         startActivity(intent)
-        finish() // Close MainActivity
+        finish()
     }
 
+    private fun setLocale(languageCode: String) {
+        val locale = Locale(languageCode)
+        Locale.setDefault(locale)
+        val config = Configuration()
+        config.setLocale(locale)
+        resources.updateConfiguration(config, resources.displayMetrics)
 
+        // Restart the activity to apply the new language
+        val refresh = Intent(this, MainActivity_user_manager::class.java)
+        startActivity(refresh)
+        finish()
+    }
 
     override fun onSupportNavigateUp(): Boolean {
         val navController = findNavController(R.id.nav_host_fragment_content_main)

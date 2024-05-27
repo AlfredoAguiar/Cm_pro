@@ -4,10 +4,10 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
-class testViewModel : ViewModel() {
+class StatViewModel : ViewModel() {
 
     private val _text = MutableLiveData<String>().apply {
-        value = "This is test Fragment"
+        value = "This is StatFragment not sure what to put"
     }
     val text: LiveData<String> = _text
 }

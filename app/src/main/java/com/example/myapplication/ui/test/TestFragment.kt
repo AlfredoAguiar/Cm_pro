@@ -1,5 +1,6 @@
 package com.example.myapplication.ui.test
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -7,8 +8,11 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import com.example.myapplication.create_users_adim
+import com.example.myapplication.edit_users_adim
 
 import com.example.myapplication.databinding.FragmentTestBinding
+
 
 class TestFragment : Fragment() {
 
@@ -32,6 +36,17 @@ class TestFragment : Fragment() {
         val textView: TextView = binding.textSlideshow
         slideshowViewModel.text.observe(viewLifecycleOwner) {
             textView.text = it
+        }
+
+        binding.button4.setOnClickListener {
+            // Navigate to the second activity
+            val intent = Intent(requireContext(), create_users_adim::class.java)
+            startActivity(intent)
+        }
+        binding.button5.setOnClickListener {
+            // Navigate to the second activity
+            val intent = Intent(requireContext(), edit_users_adim::class.java)
+            startActivity(intent)
         }
         return root
     }
