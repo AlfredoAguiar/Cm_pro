@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity_user">
+    tools:context=".ui.gallery.GalleryFragment">
 
 
     <TextView
@@ -13,16 +13,29 @@
         android:layout_height="wrap_content"
         android:fontFamily="@font/roboto_black"
         android:gravity="center"
-        android:text="Manage users"
+        android:text="@string/completed_tasks"
         android:textColor="#030047"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.11"
+        app:layout_constraintVertical_bias="0.168"
         app:layout_constraintWidth_percent="0.8"
         tools:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/text_gallery"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/button3"
@@ -31,7 +44,7 @@
         android:layout_marginTop="28dp"
         android:backgroundTint="@color/my_blue"
         android:fontFamily="@font/poppins"
-        android:text="User name"
+        android:text="taskX/ info"
         android:textColor="@color/my_yellow"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -44,15 +57,16 @@
         android:id="@+id/button4"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="21dp"
         android:backgroundTint="@color/my_blue"
         android:fontFamily="@font/poppins"
-        android:text="User name"
+        android:text="taskX/ info"
         android:textColor="@color/my_yellow"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button3"
-        app:layout_constraintVertical_bias="0.071"
+        app:layout_constraintVertical_bias="0.0"
         app:layout_constraintWidth_percent="0.8" />
 
     <Button
@@ -61,45 +75,13 @@
         android:layout_height="wrap_content"
         android:backgroundTint="@color/my_blue"
         android:fontFamily="@font/poppins"
-        android:text="User name"
+        android:text="taskX/ info"
         android:textColor="@color/my_yellow"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button4"
-        app:layout_constraintVertical_bias="0.108"
-        app:layout_constraintWidth_percent="0.8" />
-
-    <Button
-        android:id="@+id/buttonuser"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="17dp"
-        android:backgroundTint="#FFCC3E"
-        android:fontFamily="@font/poppins"
-        android:text="show users"
-        android:textColor="#030047"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonmanager"
-        app:layout_constraintVertical_bias="0.529"
-        app:layout_constraintWidth_percent="0.8" />
-
-    <Button
-        android:id="@+id/buttonmanager"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="243dp"
-        android:backgroundTint="#FFCC3E"
-        android:fontFamily="@font/poppins"
-        android:text="show managers"
-        android:textColor="#030047"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/button5"
-        app:layout_constraintVertical_bias="0.1"
+        app:layout_constraintVertical_bias="0.048"
         app:layout_constraintWidth_percent="0.8" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

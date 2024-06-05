@@ -1,6 +1,5 @@
 package com.example.myapplication
 
-import MainActivity_user_admin
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
