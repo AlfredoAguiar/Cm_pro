@@ -1,5 +1,6 @@
 package com.example.myapplication
 
+import MainActivity_user_admin
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
@@ -18,20 +19,20 @@ class login : AppCompatActivity() {
             startActivity(intent)
         }
         //If login is user normal
-       button1.setOnClickListener {
-            val intent = Intent(this, MainActivity_user::class.java)
-          startActivity(intent)
-    }
+        button1.setOnClickListener {
+            val intent = Intent(this, MainActivity_user_admin::class.java)
+            startActivity(intent)
+        }
 // If login is user admin
-  //      button1.setOnClickListener {
-   //         val intent = Intent(this, MainActivity_user_admin::class.java)
-  //          startActivity(intent)
-   //     }
+        //      button1.setOnClickListener {
+        //         val intent = Intent(this, MainActivity_user_admin::class.java)
+        //          startActivity(intent)
+   // }
 
 // If login is user manager
-       // button1.setOnClickListener {
-       //    val intent = Intent(this, MainActivity_user_manager::class.java)
-       //     startActivity(intent)
-       // }
-    }
+    // button1.setOnClickListener {
+    //    val intent = Intent(this, MainActivity_user_manager::class.java)
+    //     startActivity(intent)
+    // }
+}
 }
