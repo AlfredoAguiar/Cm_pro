@@ -3,4 +3,12 @@
     <string name="app_name">My Application</string>
     <string name="profile">Prefil</string>
     <string name="edit">Editar</string>
+    <string name="en">Inglês</string>
+    <string name="pt">Português</string>
+    <string name="remove">remover</string>
+    <string name="project">projeto</string>
+    <string name="tasks">Tarefas</string>
+    <string name="users">utilizadores</string>
+    <string name="tasks_assing">atribuir tarefas</string>
+    <string name="confirm">Confirmar</string>
 </resources>

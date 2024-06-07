@@ -40,5 +40,23 @@
         android:id="@+id/nav_create_project"
         android:name="com.example.myapplication.ui.create_project.CreateProjectFragment"
         android:label="Create Project"
-        tools:layout="@layout/fragment_test" />
+        tools:layout="@layout/project_create" />
+
+    <fragment
+        android:id="@+id/nav_asigntasks"
+        android:name="com.example.myapplication.ui.assing_tasks.assingTaskFragment"
+        android:label="assign tasks"
+        tools:layout="@layout/project_add" />
+
+    <fragment
+        android:id="@+id/nav_createtasks"
+        android:name="com.example.myapplication.ui.create_tasks.CreatetasksFragment"
+        android:label="Create tasks"
+        tools:layout="@layout/project_create" />
+
+    <fragment
+        android:id="@+id/nav_tasksstatus"
+        android:name="com.example.myapplication.ui.taskprogress.taskprogFragment"
+        android:label="task status"
+        tools:layout="@layout/tasks_prog" />
 </navigation>

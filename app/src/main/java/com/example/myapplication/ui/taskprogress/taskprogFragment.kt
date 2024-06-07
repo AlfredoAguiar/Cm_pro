@@ -1,4 +1,5 @@
-package com.example.myapplication.ui.create_tasks
+package com.example.myapplication.ui.taskprogress
+
 import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -6,18 +7,19 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import com.example.myapplication.MainActivity_user
 
 
-import com.example.myapplication.databinding.CreatetaskBinding
-import com.example.myapplication.see_proj
+
+import com.example.myapplication.databinding.TasksProgBinding
+import com.example.myapplication.see_task
 
 
-class CreatetasksFragment : Fragment() {
+class taskprogFragment : Fragment() {
 
-    private var _binding: CreatetaskBinding? = null
+    private var _binding: TasksProgBinding? = null
 
-    // This property is only valid between onCreateView and
-    // onDestroyView.
+
     private val binding get() = _binding!!
 
     override fun onCreateView(
@@ -26,24 +28,23 @@ class CreatetasksFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         val slideshowViewModel =
-            ViewModelProvider(this).get(CreatetasksViewModel::class.java)
+            ViewModelProvider(this).get(taskprogViewModel::class.java)
 
-        _binding = CreatetaskBinding.inflate(inflater, container, false)
+        _binding = TasksProgBinding.inflate(inflater, container, false)
         val root: View = binding.root
-        binding.button?.visibility = View.GONE
+
+
         binding.button3.setOnClickListener {
-            // Navigate to the second activity
-            val intent = Intent(requireContext(), see_proj::class.java)
+            val intent = Intent(requireContext(), see_task::class.java)
             startActivity(intent)
         }
+
         binding.button4.setOnClickListener {
-            // Navigate to the second activity
-            val intent = Intent(requireContext(), see_proj::class.java)
+            val intent = Intent(requireContext(), see_task::class.java)
             startActivity(intent)
         }
         binding.button5.setOnClickListener {
-            // Navigate to the second activity
-            val intent = Intent(requireContext(), see_proj::class.java)
+            val intent = Intent(requireContext(), see_task::class.java)
             startActivity(intent)
         }
         return root

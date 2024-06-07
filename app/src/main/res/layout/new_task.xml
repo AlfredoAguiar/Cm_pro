@@ -3,8 +3,19 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".ui.create_project.taskprogFragment">
+    android:layout_height="match_parent">
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="56dp"
+        android:layout_height="54dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="25dp"
+        android:backgroundTint="#FFCC3E"
+        android:text="@string/button_back"
+        android:textColor="#030047"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView2"
@@ -12,7 +23,7 @@
         android:layout_height="wrap_content"
         android:fontFamily="@font/roboto_black"
         android:gravity="center"
-        android:text="Projects"
+        android:text="@string/tasks"
         android:textColor="#030047"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -24,79 +35,64 @@
         tools:textSize="24sp" />
 
 
-    <Button
-        android:id="@+id/button3"
+    <EditText
+        android:id="@+id/textView"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:backgroundTint="@color/my_blue"
-        android:fontFamily="@font/poppins"
-        android:text="proj name/ info"
-        android:textColor="@color/my_yellow"
+        android:padding="8dp"
+        android:text="task name"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        app:layout_constraintVertical_bias="0.12"
+        android:background="@drawable/edit_text"
+        app:layout_constraintWidth_percent="0.7" />
+
+
+    <EditText
+        android:id="@+id/textView5"
+        android:padding="8dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="deadline"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2"
-        app:layout_constraintVertical_bias="0.114"
-        app:layout_constraintWidth_percent="0.8" />
+        android:background="@drawable/edit_text"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintVertical_bias="0.12"
+        app:layout_constraintWidth_percent="0.7" />
+
+    <EditText
+        android:id="@+id/textView8"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/edit_text"
+        android:padding="8dp"
+        android:text="user associated"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.478"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView5"
+        app:layout_constraintVertical_bias="0.12"
+        app:layout_constraintWidth_percent="0.7" />
 
     <Button
         android:id="@+id/button4"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="55dp"
-        android:backgroundTint="@color/my_blue"
-        android:fontFamily="@font/poppins"
-        android:text="proj name/ info"
-        android:textColor="@color/my_yellow"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button3"
-        app:layout_constraintVertical_bias="0.0"
-        app:layout_constraintWidth_percent="0.8" />
-
-    <Button
-        android:id="@+id/button5"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="14dp"
-        android:backgroundTint="@color/my_blue"
-        android:fontFamily="@font/poppins"
-        android:text="proj name/ info"
-        android:textColor="@color/my_yellow"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button4"
-        app:layout_constraintVertical_bias="0.285"
-        app:layout_constraintWidth_percent="0.8" />
-
-    <Button
-        android:id="@+id/buttonnew"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="27dp"
+        android:layout_marginBottom="60dp"
         android:backgroundTint="#FFCC3E"
         android:fontFamily="@font/poppins"
-        android:text="create new"
+        android:text="@string/confirm"
         android:textColor="#030047"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button5"
+        app:layout_constraintTop_toBottomOf="@+id/textView8"
         app:layout_constraintVertical_bias="1.0"
         app:layout_constraintWidth_percent="0.8" />
-
-    <ScrollView
-        android:layout_width="729dp"
-        android:layout_height="40dp"
-        tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="1dp">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical" />
-    </ScrollView>
-
 </androidx.constraintlayout.widget.ConstraintLayout>

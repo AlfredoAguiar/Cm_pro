@@ -1,6 +1,5 @@
 package com.example.myapplication
 
-import MainActivity_user_admin
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
@@ -15,11 +14,9 @@ class extra_profile : AppCompatActivity() {
         val button3: Button = findViewById(R.id.button3)
 
         button1.setOnClickListener {
-            val intent = Intent(this, MainActivity_user_admin::class.java)
+            val intent = Intent(this, MainActivity_user::class.java)
             startActivity(intent)
         }
-
-
 
 
         button3.setOnClickListener {

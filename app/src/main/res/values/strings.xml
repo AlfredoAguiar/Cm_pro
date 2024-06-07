@@ -17,5 +17,11 @@
     <string name="profile">Profile</string>
     <string name="edit">Edit</string>
     <string name="en">English</string>
-    <string name="pt">Portugues</string>
+    <string name="pt">Portuguese</string>
+    <string name="remove">Remove</string>
+    <string name="project">Project</string>
+    <string name="tasks">Tasks</string>
+    <string name="users">Users</string>
+    <string name="tasks_assing">tasks assing</string>
+    <string name="confirm">Confirm</string>
 </resources>

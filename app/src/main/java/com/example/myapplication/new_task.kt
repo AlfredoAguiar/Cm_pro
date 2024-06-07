@@ -5,23 +5,29 @@ import android.os.Bundle
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 
-class login : AppCompatActivity() {
+class new_task : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.login_)
+        setContentView(R.layout.new_task)
 
-        val button1: Button = findViewById(R.id.button3)
-        val button2: Button = findViewById(R.id.button2)
+        val button1: Button = findViewById(R.id.button2)
+        val button3: Button = findViewById(R.id.button4)
 
-        button2.setOnClickListener {
-            val intent = Intent(this, frist_page::class.java)
-            startActivity(intent)
-        }
+
 
         button1.setOnClickListener {
             val intent = Intent(this, MainActivity_user::class.java)
             startActivity(intent)
         }
 
-}
+
+
+        button3.setOnClickListener {
+            val intent = Intent(this, see_proj::class.java)
+            startActivity(intent)
+        }
+
+
+
+    }
 }

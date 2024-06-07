@@ -36,9 +36,34 @@ class MainActivity_user : AppCompatActivity() {
         val navView: NavigationView = binding.navView
         val navController = findNavController(R.id.nav_host_fragment_content_main)
 
+        val menu = navView.menu
+
+        //se logadado for user:
+        //menu.findItem(R.id.nav_stats).isVisible = false
+        //menu.findItem(R.id.nav_test).isVisible = false
+        //menu.findItem(R.id.nav_tasksstatus).isVisible = false
+        //menu.findItem(R.id.nav_asigntasks).isVisible = false
+        //menu.findItem(R.id.nav_createtasks).isVisible = false
+        //menu.findItem(R.id.nav_create_project).isVisible = false
+
+
+        //se logadado for user_manager:
+        //menu.findItem(R.id.nav_gallery).isVisible = false
+        //menu.findItem(R.id.nav_slideshow).isVisible = false
+        //menu.findItem(R.id.nav_test).isVisible = false
+        //menu.findItem(R.id.nav_create_project).isVisible = false
+
+
+        //se logadado for admin:
+        //menu.findItem(R.id.nav_gallery).isVisible = false
+        //menu.findItem(R.id.nav_slideshow).isVisible = false
+        //menu.findItem(R.id.nav_tasksstatus).isVisible = false
+        //menu.findItem(R.id.nav_asigntasks).isVisible = false
+        //menu.findItem(R.id.nav_createtasks).isVisible = false
+
         appBarConfiguration = AppBarConfiguration(
             setOf(
-                R.id.nav_home, R.id.nav_gallery, R.id.nav_slideshow, R.id.nav_test, R.id.nav_stats
+                R.id.nav_home, R.id.nav_gallery, R.id.nav_slideshow, R.id.nav_test, R.id.nav_stats, R.id.nav_create_project, R.id.nav_createtasks, R.id.nav_asigntasks, R.id.nav_tasksstatus
             ), drawerLayout
         )
         setupActionBarWithNavController(navController, appBarConfiguration)
